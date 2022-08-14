@@ -24,8 +24,8 @@
         <div class="prato">
             <h1>Primeiro, seu prato</h1>
             <div class="opcoes">
-                <div class="opcao prato1">
-                    <div class="selecionadov"><img src="imagens/Vector.png"></div>
+                <div class="opcao_prato" onclick="selecionarPrato(this)">
+                    <div class="selecionadov esconder"><img src="imagens/Vector.png"></div>
                     <img src="imagens/prato-feito-de-escondidinho.png">
                     <div class="opcaotexto">
                         <h1>Escondidinho</h1>
@@ -33,8 +33,8 @@
                         <h3>R$ 18,90</h3>
                     </div>
                 </div>
-                <div class="opcao prato2">
-                    <div class="selecionadov"><img src="imagens/Vector.png"></div>
+                <div class="opcao_prato" onclick="selecionarPrato(this)">
+                    <div class="selecionadov esconder"><img src="imagens/Vector.png"></div>
                     <img src="imagens/Bobo de camarao.png">
                     <div class="opcaotexto">
                         <h1>Bobó de Camarão</h1>
@@ -42,8 +42,8 @@
                         <h3>R$ 21,90</h3>
                     </div>
                 </div>
-                <div class="opcao prato3">
-                    <div class="selecionadov"><img src="imagens/Vector.png"></div>
+                <div class="opcao_prato" onclick="selecionarPrato(this)">
+                    <div class="selecionadov esconder"><img src="imagens/Vector.png"></div>
                     <img src="imagens/cus20-carnedesol.png">
                     <div class="opcaotexto">
                         <h1>Cuscuz com Carne</h1>
@@ -56,8 +56,8 @@
         <div class="bebida">
             <h1>Agora, sua bebida</h1>
             <div class="opcoes">
-                <div class="opcao">
-                    <div class="selecionadov"><img src="imagens/Vector.png"></div>
+                <div class="opcao_bebida" onclick="selecionarBebida(this)">
+                    <div class="selecionadov esconder"><img src="imagens/Vector.png"></div>
                     <img src="imagens/images.png">
                     <div class="opcaotexto">
                         <h1>Suco de Fruta</h1>
@@ -65,7 +65,8 @@
                         <h3>R$ 5,90</h3>
                     </div>
                 </div>
-                <div class="opcao">
+                <div class="opcao_bebida" onclick="selecionarBebida(this)">
+                    <div class="selecionadov esconder"><img src="imagens/Vector.png"></div>
                     <img src="imagens/refri.png">
                     <div class="opcaotexto">
                         <h1>Lata de Refrigerante</h1>
@@ -73,7 +74,8 @@
                         <h3>R$ 4,90</h3>
                     </div>
                 </div>
-                <div class="opcao">
+                <div class="opcao_bebida" onclick="selecionarBebida(this)">
+                    <div class="selecionadov esconder"><img src="imagens/Vector.png"></div>
                     <img src="imagens/cafe.png">
                     <div class="opcaotexto">
                         <h1>Cafezinho</h1>
@@ -86,7 +88,8 @@
         <div class="sobremesa">
             <h1>Por fim, sua sobremesa</h1>
             <div class="opcoes">
-                <div class="opcao">
+                <div class="opcao_sobremesa" onclick="selecionarSobremesa(this)">
+                    <div class="selecionadov esconder"><img src="imagens/Vector.png"></div>
                     <img src="imagens/bolochocolate.png">
                     <div class="opcaotexto">
                         <h1>Bolo de Chocolate</h1>
@@ -94,7 +97,8 @@
                         <h3>R$ 4,90</h3>
                     </div>
                 </div>
-                <div class="opcao">
+                <div class="opcao_sobremesa" onclick="selecionarSobremesa(this)">
+                    <div class="selecionadov esconder"><img src="imagens/Vector.png"></div>
                     <img src="imagens/moussemaracuja.png">
                     <div class="opcaotexto">
                         <h1>Mousse de Maracujá</h1>
@@ -102,7 +106,8 @@
                         <h3>R$ 6,90</h3>
                     </div>
                 </div>
-                <div class="opcao">
+                <div class="opcao_sobremesa" onclick="selecionarSobremesa(this)">
+                    <div class="selecionadov esconder"><img src="imagens/Vector.png"></div>
                     <img src="imagens/tortalimao.png">
                     <div class="opcaotexto">
                         <h1>Torta de Limão</h1>
@@ -114,12 +119,13 @@
         </div>
     </div>
     <div class="fecharpedido">
-        <button>
-            <div class="buttontext"> 
-                Selecione os 3 itens<br>
-            para fechar o pedido</div>
+        <button class="botaofechar">
+            <div> 
+                <p class="buttontext">Selecione os 3 itens<br>
+            para fechar o pedido</p>
+        </div>
            </button>
     </div>
-<script src="banana.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,99 @@
+<html>
+<head>
+<style  type="text/css">
+.answerBtnsOff
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #666666 1px solid;
+    BORDER-LEFT: #666666 1px solid;
+    BORDER-RIGHT: #666666 1px solid;
+    BORDER-TOP: #666666 1px solid;  
+    COLOR: #c;
+    FONT: 11px Verdana,Arial,Helvetica,sans-serif;
+    font-weight:bold;
+}
+.answerBtnsOn
+{
+    BACKGROUND-COLOR: GREEN;
+    BORDER-BOTTOM: #666666 1px solid;
+    BORDER-LEFT: #666666 1px solid;
+    BORDER-RIGHT: #666666 1px solid;
+    BORDER-TOP: #666666 1px solid;  
+    COLOR: #ffffff;
+    FONT: 11px Verdana,Arial,Helvetica,sans-serif;
+    font-weight:bold;
+}
+</style>
+<script lang=javascript>
+var currenttotal=0;
+function getButtons()
+{
+    document.getElementById("answerA").class="answerBtnsOff";
+    document.getElementById("answerA").setAttribute("class","answerBtnsOff");
+    document.getElementById("answerA").setAttribute("className","answerBtnsOff");
+    document.getElementById("answerB").class="answerBtnsOff";
+    document.getElementById("answerB").setAttribute("class","answerBtnsOff");
+    document.getElementById("answerB").setAttribute("className","answerBtnsOff");
+    document.getElementById("answerC").class="answerBtnsOff";
+    document.getElementById("answerC").setAttribute("class","answerBtnsOff");
+    document.getElementById("answerC").setAttribute("className","answerBtnsOff");
+    document.getElementById("answerD").class="answerBtnsOff";
+    document.getElementById("answerD").setAttribute("class","answerBtnsOff");
+    document.getElementById("answerD").setAttribute("className","answerBtnsOff");
+    document.getElementById("answerE").class="answerBtnsOff";
+    document.getElementById("answerE").setAttribute("class","answerBtnsOff");
+    document.getElementById("answerE").setAttribute("className","answerBtnsOff");
+
+    currenttotal=0;
+}
+function btnclick(btn)
+{
+    if(document.getElementById("numberDropId").value=="")
+    {
+        alert('Select option');
+        return false;
+    }
+    if (btn.class=="answerBtnsOn")
+    {
+        btn.class="answerBtnsOff";
+        btn.setAttribute("class","answerBtnsOff");
+        btn.setAttribute("className","answerBtnsOff");
+        currenttotal--;
+        return false;
+    }
+    if(document.getElementById("numberDropId").value==currenttotal)
+    {
+        alert('Not allowed beyond limit, deselect other button');
+        return false;
+    }
+    if (btn.class=="answerBtnsOff")
+    {
+        btn.class="answerBtnsOn";
+        btn.setAttribute("class","answerBtnsOn");
+        btn.setAttribute("className","answerBtnsOn");
+        currenttotal++;
+        return false;
+    }
+
+}
+</script>
+</head>
+<body>
+<p>
+    <select name="numberDropId" id="numberDropId" onchange="getButtons()" >
+    <option value=""></option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    </select>
+    </p>
+    <p>
+    <input class="answerBtnsOff" name="answerA" id="answerA" type="button" value="A"  onclick='javascript:btnclick(this);' />
+    <input class="answerBtnsOff" name="answerB" id="answerB"  type="button" value="B"  onclick='javascript:btnclick(this);'  />
+    <input class="answerBtnsOff" name="answerC" id="answerC"  type="button" value="C"   onclick='javascript:btnclick(this);' />
+    <input class="answerBtnsOff" name="answerD" id="answerD"  type="button" value="D"   onclick='javascript:btnclick(this);' />
+    <input class="answerBtnsOff" name="answerE" id="answerE"  type="button" value="E"   onclick='javascript:btnclick(this);' />
+    </p>
+    </body>
+    </html>
